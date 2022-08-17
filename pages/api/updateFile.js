@@ -18,6 +18,7 @@ export default async function updateFile(req, res) {
 			name: req.body.name,
 			lang: req.body.lang,
 			content: req.body.content,
+			public: req.body.public,
 		};
 
 		const file = await File.findOneAndUpdate(filter, update, { new: true });

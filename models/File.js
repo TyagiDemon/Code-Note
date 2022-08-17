@@ -5,6 +5,7 @@ const fileSchema = mongoose.Schema(
 		name: String,
 		lang: String,
 		content: String,
+		public: { type: Boolean, default: false },
 		authorId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 	},
 	{
